@@ -8,5 +8,20 @@
     --ff-heading: 'Staatliches', sans-serif;
     --ff-texting: 'Palanquin', sans-serif;
 
+    --hue: 250;
+    --bg-primary: hsl(var(--hue), 100%, 97%);
+    --bg-secondary: hsl(var(--hue), 17%, 62%);
+    --fc-primary: hsl(var(--hue), 0%, 100%);
+    --fc-secondary: hsl(var(--hue), 84%, 12%);
 
-}
+
+  }
+
+  body {
+    font-family: var(--ff-heading);
+    background-color: var(--bg-primary);
+  }
+
+  header {
+    background-color: var(--bg-secondary);
+  }
