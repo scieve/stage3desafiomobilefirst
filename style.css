@@ -8,20 +8,125 @@
     --ff-heading: 'Staatliches', sans-serif;
     --ff-texting: 'Palanquin', sans-serif;
 
-    --hue: 250;
-    --bg-primary: hsl(var(--hue), 100%, 97%);
-    --bg-secondary: hsl(var(--hue), 17%, 62%);
-    --fc-primary: hsl(var(--hue), 0%, 100%);
-    --fc-secondary: hsl(var(--hue), 84%, 12%);
+    --bg-primary: hsl(233, 100%, 97%);
+    --bg-secondary: hsl(218, 17%, 62%);
+    --sp-color: hsl(312, 91%, 96%);
+    --hd-color: hsl(275, 18%, 79%);
+
+    font-size: 62.5%;
+    --fc-pink: hsl(232, 17%, 35%);
+    --fc-secondary: hsl(274, 84%, 12%);
 
 
-  }
+}
 
-  body {
+body {
     font-family: var(--ff-heading);
     background-color: var(--bg-primary);
-  }
 
-  header {
+}
+
+.page {
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: var(--bg-secondary);
-  }
+    height: 279px;
+
+}
+
+header img {
+    margin-top: 32px;
+    margin-bottom: 32px;
+    width: 137px;
+    height: 137px;
+}
+
+header h1 {
+    height: 50px;
+    background-color: var(--hd-color);
+    width: 100%;
+    font-size: 4.0rem;
+    text-align: center;
+    letter-spacing: 0.05em;
+    padding-top: 8px;
+    line-height: 3.4rem;
+    color: var(--bg-primary);
+
+}
+
+main {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 14px;
+}
+
+main p {
+    width: 320px;
+    margin-bottom: 63px;
+    font-family: var(--ff-texting);
+    text-align: center;
+    line-height: 15px;
+}
+
+.card {
+    position: relative;
+    margin-bottom: 3.2rem;
+}
+
+.card img {
+    animation: downtop 700ms 350ms;
+}
+
+.card h2 {
+    top: 2.0rem;
+    right: 2.0rem;
+    position: absolute;
+    font-size: 2.0rem;
+    color: var(--fc-pink);
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+    font-weight: 400;
+}
+
+.card h2 span {
+    border-radius: 2.0rem;
+    background-color: var(--sp-color);
+    width: 11.2rem;
+    height: 3.5rem;
+    text-align: center;
+    animation: topdown 700ms;
+
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
